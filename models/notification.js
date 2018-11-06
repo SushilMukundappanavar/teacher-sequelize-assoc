@@ -1,13 +1,11 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-  const notification = sequelize.define('notification', {
-    teacherstudent_id: DataTypes.INTEGER,
-    notification: DataTypes.STRING
-  }, {});
-  notification.associate = function(models) {
-    notification.belongsTo(models.teacherstudents, {
-      foreignKey: 'teacherstudent_id'
-    });
-  };
-  return notification;
-};
+import Sequelize from 'sequelize';
+import DB from '../DB/connection';
+import TeacherDetails from './teacherdetail';
+import Student from './student';
+
+
+const Notification = DB.define('Notification', { message: Sequelize.STRING });
+Notification.belongsTo(TeacherDetails, { as: 'sender', otherKey: 'senderId' });
+
+
+export default Notification;
