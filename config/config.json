@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Roopa!43",
+    "database": "nodejs_sample",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "root12345",
+    "database": "nodejs_sample",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "Roopa!43",
+    "database": "nodejs_sample",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
